@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação dos Hormônios da Tireoide: TSH, T4, T3 Livre e T3 Reverso</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    line-height: 1.8;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background: linear-gradient(135deg, #1e1e1e 0%, #2d1b4e 100%);
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 40px rgba(187, 134, 252, 0.2);
+}
+
+h1 {
+    font-size: 2.8em;
+    color: #bb86fc;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.subtitle {
+    font-size: 1.3em;
+    color: #03dac6;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+.tags {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background-color: rgba(187, 134, 252, 0.2);
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-size: 0.9em;
+    border: 1px solid #bb86fc;
+    color: #bb86fc;
+}
+
+.intro {
+    background-color: #1e1e1e;
+    padding: 40px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    border-left: 5px solid #03dac6;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.intro p {
+    font-size: 1.15em;
+    margin-bottom: 15px;
+}
+
+.habit-section {
+    background-color: #1e1e1e;
+    padding: 40px;
+    margin-bottom: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.habit-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(187, 134, 252, 0.3);
+}
+
+.habit-title {
+    font-size: 2.2em;
+    color: #bb86fc;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-bottom: 2px solid #bb86fc;
+    padding-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.habit-title-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 1;
+    min-width: 300px;
+}
+
+.habit-title i {
+    font-size: 0.9em;
+    color: #03dac6;
+}
+
+.habit-number {
+    background: linear-gradient(135deg, #bb86fc 0%, #03dac6 100%);
+    color: #121212;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+.video-timestamp {
+    background-color: rgba(3, 218, 198, 0.2);
+    color: #03dac6;
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.5em;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    border: 1px solid #03dac6;
+    white-space: nowrap;
+}
+
+.video-timestamp:hover {
+    background-color: rgba(3, 218, 198, 0.4);
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(3, 218, 198, 0.3);
+}
+
+.video-timestamp i {
+    font-size: 1.2em;
+}
+
+h3 {
+    font-size: 1.6em;
+    color: #03dac6;
+    margin: 30px 0 15px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+h3 i {
+    font-size: 0.8em;
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 1.05em;
+    text-align: justify;
+}
+
+.highlight-box {
+    background: linear-gradient(135deg, rgba(187, 134, 252, 0.1) 0%, rgba(3, 218, 198, 0.1) 100%);
+    padding: 25px;
+    border-radius: 10px;
+    margin: 25px 0;
+    border-left: 4px solid #bb86fc;
+    box-shadow: inset 0 0 20px rgba(187, 134, 252, 0.1);
+}
+
+.highlight-box h4 {
+    color: #bb86fc;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.story-box {
+    background: linear-gradient(135deg, rgba(3, 218, 198, 0.1) 0%, rgba(187, 134, 252, 0.1) 100%);
+    padding: 25px;
+    border-radius: 10px;
+    margin: 25px 0;
+    border-left: 4px solid #03dac6;
+    font-style: italic;
+    box-shadow: inset 0 0 20px rgba(3, 218, 198, 0.1);
+}
+
+.quote {
+    background-color: rgba(187, 134, 252, 0.05);
+    padding: 30px;
+    border-radius: 10px;
+    margin: 25px 0;
+    border-left: 5px solid #03dac6;
+    font-size: 1.2em;
+    font-style: italic;
+    color: #bb86fc;
+    position: relative;
+}
+
+.quote::before {
+    content: '"';
+    font-size: 4em;
+    position: absolute;
+    top: -10px;
+    left: 15px;
+    color: rgba(187, 134, 252, 0.3);
+    font-family: Georgia, serif;
+}
+
+.quote-author {
+    text-align: right;
+    margin-top: 15px;
+    font-size: 0.9em;
+    color: #03dac6;
+    font-style: normal;
+}
+
+.action-step {
+    background: linear-gradient(135deg, #2d1b4e 0%, #1e1e1e 100%);
+    padding: 30px;
+    border-radius: 15px;
+    margin: 30px 0;
+    border: 2px solid #03dac6;
+    box-shadow: 0 5px 20px rgba(3, 218, 198, 0.2);
+}
+
+.action-step h4 {
+    color: #03dac6;
+    font-size: 1.4em;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.action-step i {
+    font-size: 1.2em;
+}
+
+ul, ol {
+    margin: 20px 0 20px 30px;
+}
+
+li {
+    margin-bottom: 15px;
+    font-size: 1.05em;
+    line-height: 1.7;
+}
+
+.key-points {
+    background-color: rgba(3, 218, 198, 0.1);
+    padding: 25px;
+    border-radius: 10px;
+    margin: 25px 0;
+}
+
+.key-points h4 {
+    color: #03dac6;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.key-points ul {
+    list-style: none;
+    margin-left: 0;
+}
+
+.key-points li::before {
+    content: "✓ ";
+    color: #03dac6;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.stats {
+    background: linear-gradient(135deg, rgba(187, 134, 252, 0.2) 0%, rgba(3, 218, 198, 0.2) 100%);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #bb86fc;
+}
+
+.conclusion {
+    background: linear-gradient(135deg, #2d1b4e 0%, #1e1e1e 100%);
+    padding: 50px;
+    border-radius: 20px;
+    margin-top: 50px;
+    border: 3px solid #bb86fc;
+    box-shadow: 0 10px 40px rgba(187, 134, 252, 0.3);
+    text-align: center;
+}
+
+.conclusion h2 {
+    color: #bb86fc;
+    font-size: 2.2em;
+    margin-bottom: 25px;
+}
+
+.conclusion p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.final-message {
+    background: linear-gradient(135deg, #bb86fc 0%, #03dac6 100%);
+    color: #121212;
+    padding: 30px;
+    border-radius: 15px;
+    margin-top: 30px;
+    font-size: 1.3em;
+    font-weight: 600;
+    box-shadow: 0 5px 20px rgba(187, 134, 252, 0.5);
+}
+
+strong {
+    color: #bb86fc;
+    font-weight: 600;
+}
+
+.scale-question {
+    background-color: rgba(187, 134, 252, 0.1);
+    padding: 25px;
+    border-radius: 10px;
+    margin: 25px 0;
+    border: 2px dashed #bb86fc;
+}
+
+.scale-question h4 {
+    color: #bb86fc;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+.two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 25px 0;
+}
+
+.column-box {
+    background-color: rgba(187, 134, 252, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #bb86fc;
+}
+
+.column-box.energize {
+    border-color: #03dac6;
+    background-color: rgba(3, 218, 198, 0.1);
+}
+
+.column-box.drain {
+    border-color: #cf6679;
+    background-color: rgba(207, 102, 121, 0.1);
+}
+
+.column-box h5 {
+    color: #bb86fc;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.column-box.energize h5 {
+    color: #03dac6;
+}
+
+.column-box.drain h5 {
+    color: #cf6679;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .habit-title {
+        font-size: 1.6em;
+    }
+
+    .habit-title-content {
+        min-width: 100%;
+    }
+
+    .video-timestamp {
+        font-size: 0.6em;
+        padding: 6px 12px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .habit-section {
+        padding: 25px;
+    }
+
+    header {
+        padding: 40px 15px;
+    }
+
+    .two-column {
+        grid-template-columns: 1fr;
+    }
+}
+
+        details {
+            background-color: #1e1e1e;
+            border-radius: 10px;
+            margin: 15px 0;
+            padding: 15px;
+            border-left: 4px solid #bb86fc;
+            transition: all 0.3s ease;
+        }
+        details:hover {
+            box-shadow: 0 5px 20px rgba(187, 134, 252, 0.2);
+        }
+        summary {
+            cursor: pointer;
+            font-weight: 600;
+            color: #bb86fc;
+            padding: 10px;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.1em;
+        }
+        summary::-webkit-details-marker {
+            display: none;
+        }
+        summary::before {
+            content: "▶";
+            transition: transform 0.3s ease;
+            color: #03dac6;
+        }
+        details[open] summary::before {
+            transform: rotate(90deg);
+        }
+        .timestamp-link {
+            color: #03dac6;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        .timestamp-link:hover {
+            color: #bb86fc;
+            text-decoration: underline;
+        }
+        .reference-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: rgba(187, 134, 252, 0.05);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .reference-table th,
+        .reference-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid rgba(187, 134, 252, 0.2);
+        }
+        .reference-table th {
+            background-color: rgba(187, 134, 252, 0.2);
+            color: #bb86fc;
+            font-weight: 600;
+        }
+        .reference-table tr:hover {
+            background-color: rgba(3, 218, 198, 0.1);
+        }
+        .optimal-range {
+            color: #03dac6;
+            font-weight: 600;
+        }
+        .warning-text {
+            color: #cf6679;
+            font-weight: 500;
+        }
+        .conversion-diagram {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin: 25px 0;
+            flex-wrap: wrap;
+            padding: 20px;
+            background: linear-gradient(135deg, rgba(187, 134, 252, 0.1) 0%, rgba(3, 218, 198, 0.1) 100%);
+            border-radius: 10px;
+        }
+        .conversion-step {
+            background-color: rgba(30, 30, 30, 0.8);
+            padding: 15px 25px;
+            border-radius: 8px;
+            text-align: center;
+            border: 2px solid #bb86fc;
+            min-width: 120px;
+        }
+        .conversion-step.good {
+            border-color: #03dac6;
+        }
+        .conversion-step.bad {
+            border-color: #cf6679;
+        }
+        .conversion-arrow {
+            font-size: 1.5em;
+            color: #bb86fc;
+        }
+        .supplement-card {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .supplement-item {
+            background: linear-gradient(135deg, rgba(3, 218, 198, 0.15) 0%, rgba(187, 134, 252, 0.15) 100%);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid #03dac6;
+        }
+        .supplement-item i {
+            font-size: 1.8em;
+            color: #03dac6;
+            margin-bottom: 10px;
+        }
+        .supplement-item .dose {
+            font-weight: 600;
+            color: #bb86fc;
+            margin-top: 8px;
+        }
+        .cause-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+        .cause-card {
+            background-color: rgba(187, 134, 252, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #bb86fc;
+        }
+        .cause-card.autoimmune {
+            border-color: #cf6679;
+            background-color: rgba(207, 102, 121, 0.1);
+        }
+        .cause-card.toxic {
+            border-color: #ffb74d;
+            background-color: rgba(255, 183, 77, 0.1);
+        }
+        .temperature-tip {
+            background: linear-gradient(135deg, rgba(3, 218, 198, 0.2) 0%, rgba(187, 134, 252, 0.2) 100%);
+            padding: 25px;
+            border-radius: 10px;
+            margin: 25px 0;
+            border: 2px dashed #03dac6;
+        }
+        .video-link-container {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: rgba(3, 218, 198, 0.15);
+            padding: 6px 14px;
+            border-radius: 20px;
+            margin: 5px 0;
+        }
+        .video-link-container i {
+            color: #03dac6;
+        }
+        .video-link-container a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .video-link-container a:hover {
+            color: #bb86fc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-heartbeat"></i> Avaliação dos Hormônios da Tireoide</h1>
+            <p class="subtitle">Entendendo TSH, T4, T3 Livre e T3 Reverso para uma saúde metabólica otimizada</p>
+            <div class="tags">
+                <span class="tag"><i class="fas fa-flask"></i> Endocrinologia</span>
+                <span class="tag"><i class="fas fa-brain"></i> Metabolismo</span>
+                <span class="tag"><i class="fas fa-dna"></i> Hormônios</span>
+                <span class="tag"><i class="fas fa-user-md"></i> Medicina Funcional</span>
+            </div>
+        </header>
+
+        <section class="intro">
+            <p><strong>Objetivo deste material:</strong> Capacitar pacientes e profissionais com conhecimento profundo sobre a avaliação completa dos hormônios tireoidianos, permitindo autonomia na compreensão dos exames e nos fatores que influenciam a conversão hormonal.</p>
+            
+            <div class="video-link-container">
+                <i class="fab fa-youtube"></i>
+                <a href="https://www.youtube.com/watch?v=VIDEO_ID&t=0s" target="_blank" rel="noopener noreferrer">
+                    Assistir ao vídeo completo <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>
+            
+            <p class="warning-text"><i class="fas fa-info-circle"></i> <strong>Nota:</strong> Este conteúdo não substitui a avaliação médica individualizada. Consulte sempre seu especialista para condutas personalizadas.</p>
+        </section>
+
+<img src="./hORz3L_EuGw_0001.png" alt="Imagem 0001" style="display: block; margin: 10px auto; max-width: 100%; height: auto;" />
+
+<audio controls style="display: block; margin: 10px auto; width: 100%;"><source src="./hORz3L_EuGw_0002.mp3" type="audio/x-m4a"></audio>
+
+
+        <!-- Seção 1: Introdução à Avaliação Tireoidiana -->
+        <details open>
+            <summary><i class="fas fa-book-open"></i> Por que avaliar além do TSH?</summary>
+            <div class="habit-section">
+                <p>A avaliação tradicional baseada apenas no <strong>TSH</strong> (hormônio estimulante da tireoide) é insuficiente para compreender a realidade metabólica do paciente. O corpo fala aquilo que o paciente muitas vezes não sabe relatar, e a medicina deve ouvir esses sinais.</p>
+                
+                <div class="highlight-box">
+                    <h4><i class="fas fa-exclamation-triangle"></i> O Problema do TSH Isolado</h4>
+                    <p>O valor de referência laboratorial do TSH (0,45 a 4,5 mUI/L) coloca pessoas saudáveis e doentes no mesmo intervalo. Um paciente pode ter TSH "normal" e ainda apresentar sintomas clássicos de hipotireoidismo: cansaço, pele ressecada, queda de cabelo, unhas frágeis, dificuldade de perda de peso e fadiga vespertina.</p>
+                </div>
+
+                <div class="key-points">
+                    <h4><i class="fas fa-check-circle"></i> Avaliação Completa Recomendada</h4>
+                    <ul>
+                        <li><strong>TSH</strong> – Hormônio cerebral que estimula a tireoide</li>
+                        <li><strong>T4 Livre</strong> – Pró-hormônio produzido pela tireoide</li>
+                        <li><strong>T3 Livre</strong> – Hormônio ativo responsável pela energia e metabolismo</li>
+                        <li><strong>T3 Reverso</strong> – Forma inativa ("hibernação metabólica")</li>
+                    </ul>
+                </div>
+
+                <div class="video-link-container">
+                    <i class="fab fa-youtube"></i>
+                    <a href="https://www.youtube.com/watch?v=VIDEO_ID&t=203s" target="_blank" rel="noopener noreferrer">
+                        03:23 – Início da explicação sobre TSH <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </details>
+
+        <!-- Seção 2: TSH - O Hormônio Cerebral -->
+        <details>
+            <summary><i class="fas fa-brain"></i> TSH: O Mensageiro do Cérebro</summary>
+            <div class="habit-section">
+                <p>O <strong>TSH</strong> (Thyroid Stimulating Hormone) é produzido pela hipófise e representa a comunicação do cérebro com a tireoide. Não é produzido pela glândula tireoide, mas sim pelo sistema nervoso central.</p>
+
+                <table class="reference-table">
+                    <thead>
+                        <tr>
+                            <th>Parâmetro</th>
+                            <th>Valor de Referência Laboratorial</th>
+                            <th>Faixa Ótima Sugerida</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>TSH</strong></td>
+                            <td>0,45 – 4,5 mUI/L</td>
+                            <td class="optimal-range">1,9 – 2,2 mUI/L</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="highlight-box">
+                    <h4><i class="fas fa-lightbulb"></i> Conceito de Percentil</h4>
+                    <p>Para hormônios tireoidianos, o ideal é buscar valores no percentil superior da referência (exceto para TSH e T3 Reverso). Valores no limite inferior indicam início de decadência metabólica, mesmo estando "dentro da normalidade".</p>
+                </div>
+
+                <div class="video-link-container">
+                    <i class="fab fa-youtube"></i>
+                    <a href="https://www.youtube.com/watch?v=VIDEO_ID&t=323s" target="_blank" rel="noopener noreferrer">
+                        05:23 – Detalhamento do TSH e valores ideais <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </details>
+
+<!-- Seção: Interpretação de TSH Elevado -->
+<details>
+    <summary><i class="fas fa-vial"></i> TSH 5,6 mUI/L em homem de 54 anos: o que significa?</summary>
+    <div class="habit-section">
+        <p>
+            Um valor de <strong>TSH de 5,6 mUI/L</strong> em um homem de 54 anos, na maioria das vezes, sugere um quadro de 
+            <strong>hipotireoidismo subclínico</strong>, ou seja, TSH levemente elevado com T4 ainda dentro da faixa normal.
+        </p>
+
+        <p>
+            Muitos laboratórios consideram TSH normal aproximadamente entre <strong>0,45 e 4,5 mUI/L</strong>. 
+            Valores entre cerca de 5 e 10 mUI/L, quando acompanhados de T4 livre normal, costumam ser classificados como 
+            “hipotireoidismo subclínico”, fase em que a hipófise já aumenta o TSH porque a tireoide começa a falhar, 
+            mas ainda mantém os hormônios tireoidianos dentro da normalidade, o que faz com que muitas pessoas tenham 
+            poucos ou nenhum sintoma.
+        </p>
+
+        <h4><i class="fas fa-search"></i> Causas mais prováveis para TSH levemente elevado (5–10 mUI/L)</h4>
+        <ul>
+            <li>
+                <strong>Tireoidite de Hashimoto (doença autoimune)</strong> – causa mais comum de hipotireoidismo em adultos 
+                em países com ingestão adequada de iodo. O sistema imunológico passa a agredir a glândula tireoide, levando à 
+                perda progressiva de função.
+            </li>
+            <li>
+                <strong>Início de hipotireoidismo “comum”</strong> – a tireoide vai perdendo função aos poucos; o TSH sobe antes 
+                que o T4 caia abaixo da referência, caracterizando o estágio subclínico.
+            </li>
+            <li>
+                <strong>Alterações na ingestão de iodo</strong> – carência ou excesso (suplementos com algas, uso recente de 
+                contraste iodado, etc.) podem interferir na função tireoidiana e elevar o TSH.
+            </li>
+            <li>
+                <strong>Medicamentos</strong> – fármacos como amiodarona, lítio, interferon e alguns imunoterápicos podem 
+                induzir hipotireoidismo e aumento do TSH.
+            </li>
+            <li>
+                <strong>Fases de recuperação de doenças</strong> – após doenças graves ou tireoidites transitórias (por exemplo, 
+                pós-viral), o TSH pode ficar temporariamente elevado.
+            </li>
+            <li>
+                <strong>Obesidade e alterações metabólicas</strong> – em algumas pessoas, o excesso de peso se associa a TSH 
+                discretamente mais alto, mesmo sem hipotireoidismo franco.
+            </li>
+        </ul>
+
+        <h4><i class="fas fa-sync-alt"></i> Possibilidade de normalização espontânea</h4>
+        <p>
+            Uma parte considerável dos casos de TSH levemente elevado (na faixa de 5–6 mUI/L) pode voltar ao normal na repetição 
+            do exame, por variação biológica ou por fatores transitórios (doença recente, uso de medicamentos, alterações de iodo etc.). 
+            Por isso, costuma-se repetir TSH e <strong>T4 livre</strong> após algumas semanas ou meses antes de fechar o diagnóstico.
+        </p>
+
+        <h4><i class="fas fa-clipboard-check"></i> Exames e avaliações úteis</h4>
+        <ul>
+            <li>
+                Repetir <strong>TSH</strong> associado a <strong>T4 livre</strong> (e, em alguns casos, T3) para confirmar se se trata 
+                de hipotireoidismo subclínico persistente.
+            </li>
+            <li>
+                Dosar <strong>anticorpos antitireoidianos</strong> (anti-TPO, anti-tireoglobulina) para investigar tireoidite de Hashimoto.
+            </li>
+            <li>
+                Revisar medicamentos em uso, suplementos com iodo, histórico de radioterapia cervical ou cirurgia de tireoide.
+            </li>
+            <li>
+                Avaliar sintomas: cansaço, ganho de peso, intolerância ao frio, pele seca, constipação, alterações de colesterol, 
+                queda de cabelo, entre outros.
+            </li>
+        </ul>
+
+        <div class="highlight-box">
+            <h4><i class="fas fa-exclamation-triangle"></i> Quando tratar?</h4>
+            <p>
+                Em TSH persistentemente acima de 10 mUI/L, a tendência é indicar tratamento na maioria dos casos. 
+                Na faixa de 5 a 10 mUI/L, a decisão de tratar depende de fatores como:
+                presença de sintomas importantes, anticorpos positivos (Hashimoto), doenças cardiovasculares, 
+                colesterol alterado, desejo de gestação (no caso de mulheres) e preferência do paciente após 
+                discussão com o médico.
+            </p>
+        </div>
+
+        <p>
+            Este conteúdo tem caráter informativo e não substitui avaliação individualizada. 
+            A interpretação final deve ser feita por um médico, considerando o conjunto de exames, sintomas e histórico clínico.
+        </p>
+    </div>
+</details>
+
+
+        <!-- Seção 3: T4 Livre - O Pró-Hormônio -->
+        <details>
+            <summary><i class="fas fa-cube"></i> T4 Livre: A Matéria-Prima</summary>
+            <div class="habit-section">
+                <p>O <strong>T4 (tiroxina)</strong> é o pró-hormônio produzido pela tireoide sob estímulo do TSH. É considerado um "pró-hormônio" porque precisa ser convertido em T3 para exercer sua ação metabólica na maioria dos tecidos.</p>
+
+                <table class="reference-table">
+                    <thead>
+                        <tr>
+                            <th>Parâmetro</th>
+                            <th>Valor de Referência Laboratorial</th>
+                            <th>Faixa Ótima Sugerida</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>T4 Livre</strong></td>
+                            <td>0,7 – 1,7 ng/dL (varia por laboratório)</td>
+                            <td class="optimal-range">≥ 1,2 ng/dL</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="conversion-diagram">
+                    <div class="conversion-step">
+                        <i class="fas fa-microscope"></i><br>
+                        <strong>Iodo + Tirosina</strong><br>
+                        <small>Matéria-prima</small>
+                    </div>
+                    <div class="conversion-arrow">→</div>
+                    <div class="conversion-step">
+                        <i class="fas fa-dna"></i><br>
+                        <strong>T4 Livre</strong><br>
+                        <small>Pró-hormônio</small>
+                    </div>
+                    <div class="conversion-arrow">→</div>
+                    <div class="conversion-step good">
+                        <i class="fas fa-bolt"></i><br>
+                        <strong>T3 Livre</strong><br>
+                        <small>Hormônio ativo</small>
+                    </div>
+                </div>
+
+                <div class="key-points">
+                    <h4><i class="fas fa-seedling"></i> Fatores Essenciais para Produção de T4</h4>
+                    <ul>
+                        <li><strong>Ferritina ≥ 70 ng/mL</strong> – Necessária para síntese hormonal</li>
+                        <li><strong>Iodo orgânico</strong> – Matéria-prima da molécula de tiroxina</li>
+                        <li><strong>Ausência de toxinas</strong> – Flúor, cloro e bromo competem com o iodo na molécula</li>
+                        <li><strong>Intestino íntegro</strong> – 80% da conversão periférica ocorre no intestino</li>
+                    </ul>
+                </div>
+
+                <div class="story-box">
+                    <p><i class="fas fa-quote-left"></i> O cérebro é o único órgão que utiliza o T4 diretamente. Todo o restante do corpo depende da conversão para T3 Livre. Por isso, ter T4 normal não garante que o metabolismo esteja funcionando adequadamente.</p>
+                </div>
+
+                <div class="video-link-container">
+                    <i class="fab fa-youtube"></i>
+                    <a href="https://www.youtube.com/watch?v=VIDEO_ID&t=716s" target="_blank" rel="noopener noreferrer">
+                        11:56 – Produção e conversão do T4 <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </details>
+
+        <!-- Seção 4: A Encruzilhada Metabólica - T3 Livre vs T3 Reverso -->
+        <details open>
+            <summary><i class="fas fa-exchange-alt"></i> A Conversão Crítica: T3 Livre ou T3 Reverso?</summary>
+            <div class="habit-section">
+                <p>Este é o ponto central da avaliação tireoidiana funcional. O T4 pode seguir dois caminhos metabólicos distintos:</p>
+
+                <div class="conversion-diagram">
+                    <div class="conversion-step">
+                        <i class="fas fa-cube"></i><br>
+                        <strong>T4 Livre</strong>
+                    </div>
+                    <div class="conversion-arrow">↓</div>
+                    <div style="display: flex; flex-direction: column; gap: 10px; align-items: center;">
+                        <div class="conversion-step good">
+                            <i class="fas fa-arrow-right"></i><br>
+                            <strong>T3 Livre</strong><br>
+                            <small class="optimal-range">Energia, metabolismo, ânimo</small>
+                        </div>
+                        <div class="conversion-step bad">
+                            <i class="fas fa-arrow-left"></i><br>
+                            <strong>T3 Reverso</strong><br>
+                            <small class="warning-text">Hibernação, fadiga, ganho de peso</small>
+                        </div>
+                    </div>
+                </div>
+
+                <table class="reference-table">
+                    <thead>
+                        <tr>
+                            <th>Hormônio</th>
+                            <th>Referência Laboratorial</th>
+                            <th>Faixa Ótima</th>
+                            <th>Interpretação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>T3 Livre</strong></td>
+                            <td>2,0 – 4,0 pg/mL</td>
+                            <td class="optimal-range">≥ 3,3 pg/mL</td>
+                            <td>Quanto mais alto, melhor (dentro da referência)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>T3 Reverso</strong></td>
+                            <td>8 – 24 ng/dL</td>
+                            <td class="optimal-range">8 – 12 ng/dL</td>
+                            <td>Quanto mais baixo, melhor</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="highlight-box">
+                    <h4><i class="fas fa-cogs"></i> Enzimas Desiodases: Os "Interruptores" Metabólicos</h4>
+                    <p>A conversão do T4 para T3 Livre ou T3 Reverso é regulada pelas enzimas desiodases, que dependem de cofatores nutricionais:</p>
+                    
+                    <div class="supplement-card">
+                        <div class="supplement-item">
+                            <i class="fas fa-atom"></i>
+                            <strong>Selênio</strong>
+                            <div class="dose">25 mcg quelado</div>
+                            <small>Ativa desiodase tipo 1 e 2</small>
+                        </div>
+                        <div class="supplement-item">
+                            <i class="fas fa-battery-full"></i>
+                            <strong>Zinco</strong>
+                            <div class="dose">15-30 mg quelado</div>
+                            <small>Cofator enzimático essencial</small>
+                        </div>
+                        <div class="supplement-item">
+                            <i class="fas fa-magnet"></i>
+                            <strong>Magnésio</strong>
+                            <div class="dose">200 mg quelado</div>
+                            <small>Ativação enzimática geral</small>
+                        </div>
+                        <div class="supplement-item">
+                            <i class="fas fa-tint"></i>
+                            <strong>Ferro</strong>
+                            <div class="dose">50 mg se ferritina &lt;70</div>
+                            <small>+ Vitamina C para absorção</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-link-container">
+                    <i class="fab fa-youtube"></i>
+                    <a href="https://www.youtube.com/watch?v=VIDEO_ID&t=1704s" target="_blank" rel="noopener noreferrer">
+                        28:24 – Conversão T4 → T3 e fatores determinantes <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </details>
+
+<img src="./hORz3L_EuGw_0004.png" alt="Imagem 0004" style="display: block; margin: 10px auto; max-width: 100%; height: auto;" />
+
+
+        <!-- Seção 5: Causas de Alteração na Conversão -->
+        <details>
+            <summary><i class="fas fa-search"></i> Por que o T4 não vira T3? Causas Comuns</summary>
+            <div class="habit-section">
+                <p>Identificar a causa raiz da conversão inadequada é fundamental para o tratamento eficaz.</p>
+
+                <div class="cause-grid">
+                    <div class="cause-card">
+                        <h5><i class="fas fa-tint"></i> Deficiência de Ferro</h5>
+                        <p><strong>Ferritina &lt; 70 ng/mL</strong> compromete a síntese de T4 e a atividade das desiodases. Comum em mulheres com fluxo menstrual intenso, frequentemente associado à baixa progesterona e permeabilidade intestinal.</p>
+                    </div>
+                    
+                    <div class="cause-card autoimmune">
+                        <h5><i class="fas fa-shield-virus"></i> Tireoidite de Hashimoto</h5>
+                        <p>Doença autoimune onde o sistema imunológico ataca a tireoide. Moléculas mal digeridas de <strong>glúten e caseína</strong> podem mimetizar tecidos tireoidianos, desencadeando a reação cruzada.</p>
+                    </div>
+                    
+                    <div class="cause-card toxic">
+                        <h5><i class="fas fa-skull-crossbones"></i> Intoxicação por Halogênios</h5>
+                        <p><strong>Flúor, cloro e bromo</strong> competem com o iodo na molécula de tiroxina. Fontes: pasta dental com flúor, piscinas cloradas, farinha de trigo (bromato de potássio), retardantes de chama.</p>
+                    </div>
+                    
+                    <div class="cause-card">
+                        <h5><i class="fas fa-utensils"></i> Disbiose Intestinal</h5>
+                        <p>80% da conversão periférica de T4 para T3 ocorre no intestino. Inflamação intestinal, SIBO ou permeabilidade comprometem drasticamente a produção de T3 Livre.</p>
+                    </div>
+                </div>
+
+                <div class="highlight-box">
+                    <h4><i class="fas fa-user-injured"></i> Caso Clínico Ilustrativo</h4>
+                    <p>Paciente masculino, perfumista, diagnosticado com hipotireoidismo. A causa não era autoimune nem nutricional, mas sim <strong>intoxicação por voláteis</strong> (ésteres e compostos químicos inalados no trabalho). A pele e a via respiratória são portas de entrada para toxinas que comprometem a função tireoidiana.</p>
+                </div>
+
+                <div class="video-link-container">
+                    <i class="fab fa-youtube"></i>
+                    <a href="https://www.youtube.com/watch?v=VIDEO_ID&t=1454s" target="_blank" rel="noopener noreferrer">
+                        24:14 – Causas de hipotireoidismo além da autoimunidade <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </details>
+
+        <!-- Seção 6: Diagnóstico Prático - Temperatura Basal -->
+        <details>
+            <summary><i class="fas fa-thermometer-half"></i> Ferramenta Caseira: Temperatura Basal</summary>
+            <div class="habit-section">
+                <p>Uma forma acessível de rastrear a conversão adequada de T4 para T3 é monitorar a temperatura corporal basal.</p>
+
+                <div class="temperature-tip">
+                    <h4><i class="fas fa-clipboard-list"></i> Protocolo de Medição</h4>
+                    <ol>
+                        <li>Utilize termômetro de mercúrio ou digital de alta precisão</li>
+                        <li>Meça <strong>ao acordar, antes de levantar da cama</strong></li>
+                        <li>Coloque o termômetro na axila por 8 minutos</li>
+                        <li>Registre a temperatura por <strong>pelo menos 5 dias consecutivos</strong></li>
+                        <li>Calcule a média das medições</li>
+                    </ol>
+                    
+                    <div class="stats">
+                        <i class="fas fa-bullseye"></i> 
+                        <strong>Meta:</strong> Temperatura basal média ≥ 36,6°C indica conversão adequada de T4 para T3
+                    </div>
+                    
+                    <p class="warning-text"><i class="fas fa-exclamation-circle"></i> Temperatura consistentemente abaixo de 36,6°C merece investigação com dosagem de T3 Livre e T3 Reverso, mesmo com TSH "normal".</p>
+                </div>
+
+                <div class="quote">
+                    "Muitas pessoas com T3 Livre no limite inferior são tratadas como depressivas, quando na realidade apresentam um problema de conversão hormonal. O diagnóstico correto muda completamente a conduta."
+                    <div class="quote-author">— Autora</div>
+                </div>
+
+                <div class="video-link-container">
+                    <i class="fab fa-youtube"></i>
+                    <a href="https://www.youtube.com/watch?v=VIDEO_ID&t=2909s" target="_blank" rel="noopener noreferrer">
+                        48:29 – Como medir e interpretar a temperatura basal <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </details>
+
+        <!-- Seção 7: Condutas Terapêuticas -->
+        <details>
+            <summary><i class="fas fa-prescription-bottle-alt"></i> Abordagens de Tratamento</summary>
+            <div class="habit-section">
+                <p>O tratamento deve ser individualizado conforme a causa identificada e o perfil laboratorial.</p>
+
+                <div class="action-step">
+                    <h4><i class="fas fa-layer-group"></i> Estratégia em Camadas</h4>
+                    <ol>
+                        <li><strong>Corrigir deficiências nutricionais:</strong> Ferro, selênio, zinco, magnésio, vitamina C</li>
+                        <li><strong>Reduzir carga tóxica:</strong> Evitar flúor, cloro, bromo; filtrar água; escolher produtos de higiene sem halogênios</li>
+                        <li><strong>Tratar o intestino:</strong> Protocolos para permeabilidade, disbiose e inflamação</li>
+                        <li><strong>Modular autoimunidade (se Hashimoto):</strong> Dieta sem glúten e caseína, controle de estresse, vitamina D</li>
+                        <li><strong>Reposição hormonal (se necessário):</strong> T4, T3 ou combinação, sempre com monitoramento laboratorial</li>
+                    </ol>
+                </div>
+
+                <div class="highlight-box">
+                    <h4><i class="fas fa-flask"></i> Reposição Hormonal: Pontos Críticos</h4>
+                    <ul>
+                        <li><strong>T4 (levotiroxina)</strong>: Meia-vida de ~7 dias; essencial para função cerebral</li>
+                        <li><strong>T3 (liotironina)</strong>: Meia-vida de 5-6 horas; pode requerer 2-3 doses diárias</li>
+                        <li><strong>Manipulação</strong>: Exige farmácia com equipamento de precisão para microdosagens</li>
+                        <li><strong>Monitoramento</strong>: Reavaliar TSH, T4 Livre, T3 Livre e T3 Reverso a cada 6-8 semanas durante ajuste</li>
+                    </ul>
+                </div>
+
+                <div class="story-box">
+                    <p><i class="fas fa-quote-left"></i> Não pare sua medicação de T4 se já a utiliza. O T4 é crucial para o cérebro. A questão é garantir que o restante do corpo também receba T3 Livre em quantidade adequada, seja por conversão eficiente ou por suplementação direta quando necessário.</p>
+                </div>
+
+                <div class="video-link-container">
+                    <i class="fab fa-youtube"></i>
+                    <a href="https://www.youtube.com/watch?v=VIDEO_ID&t=3242s" target="_blank" rel="noopener noreferrer">
+                        54:02 – Condutas de reposição e monitoramento <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </details>
+
+        <!-- Seção 8: Considerações Finais -->
+        <details open>
+            <summary><i class="fas fa-lightbulb"></i> Síntese e Próximos Passos</summary>
+            <div class="habit-section">
+                <div class="key-points">
+                    <h4><i class="fas fa-star"></i> Pontos-Chave para Lembrar</h4>
+                    <ul>
+                        <li>Avalie sempre o quarteto completo: TSH, T4 Livre, T3 Livre e T3 Reverso</li>
+                        <li>Busque valores no percentil superior da referência (exceto TSH e T3 Reverso)</li>
+                        <li>Investigue a causa raiz: nutrição, toxinas, autoimunidade ou intestino</li>
+                        <li>Suplementação direcionada (selênio, zinco, magnésio, ferro) pode otimizar a conversão</li>
+                        <li>Temperatura basal é uma ferramenta prática de rastreamento caseiro</li>
+                        <li>O tratamento eficaz combina correção de causas + reposição hormonal quando indicada</li>
+                    </ul>
+                </div>
+
+                <div class="scale-question">
+                    <h4><i class="fas fa-question-circle"></i> Reflexão para o Leitor</h4>
+                    <p>Se você apresenta sintomas de hipotireoidismo mas seu TSH está "normal", quais dos quatro hormônios tireoidianos você já avaliou? O que esta leitura revela sobre possíveis lacunas na sua investigação?</p>
+                </div>
+
+                <div class="two-column">
+                    <div class="column-box energize">
+                        <h5><i class="fas fa-plus-circle"></i> Potencializa a Conversão para T3</h5>
+                        <ul>
+                            <li>Ferritina ≥ 70 ng/mL</li>
+                            <li>Selênio, zinco, magnésio adequados</li>
+                            <li>Intestino íntegro e sem inflamação</li>
+                            <li>Ausência de toxinas halogenadas</li>
+                            <li>Controle do estresse e sono de qualidade</li>
+                        </ul>
+                    </div>
+                    <div class="column-box drain">
+                        <h5><i class="fas fa-minus-circle"></i> Desvia para T3 Reverso</h5>
+                        <ul>
+                            <li>Deficiência de ferro ou selênio</li>
+                            <li>Inflamação intestinal ou sistêmica</li>
+                            <li>Excesso de cortisol (estresse crônico)</li>
+                            <li>Exposição a flúor, cloro, bromo</li>
+                            <li>Restrição calórica severa ou jejum prolongado</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="video-link-container">
+                    <i class="fab fa-youtube"></i>
+                    <a href="https://www.youtube.com/watch?v=VIDEO_ID&t=3579s" target="_blank" rel="noopener noreferrer">
+                        59:39 – Encerramento e mensagem final <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </details>
+
+        <section class="conclusion">
+            <h2><i class="fas fa-heart"></i> Conclusão</h2>
+            <p>A avaliação tireoidiana completa é um ato de respeito à complexidade do metabolismo humano. Não se trata de buscar a "perfeição" inalcançável, mas de <strong>fazer o melhor com o conhecimento disponível</strong>, honrando a individualidade de cada organismo.</p>
+            
+            <p>Autonomia do paciente e parceria com o médico não são excludentes. Pelo contrário: quando o paciente compreende os mecanismos que regem sua saúde, a relação terapêutica se fortalece e os resultados se potencializam.</p>
+            
+            <div class="final-message">
+                <i class="fas fa-seedling"></i> 
+                "Tudo tem cura. Basta que a gente trate a causa."
+            </div>
+        </section>
+    </div>
+
+<video controls style="display: block; margin: 10px auto; max-width: 100%;"><source src="./hORz3L_EuGw_0003.mp4" type="video/mp4"></video>
+
+
+    <script>
+        // Script para melhorar a experiência de colapso/expansão
+        document.querySelectorAll('details').forEach(detail => {
+            detail.addEventListener('toggle', function() {
+                // Adiciona transição suave ao abrir/fechar
+                this.style.transition = 'all 0.3s ease';
+            });
+        });
+
+        // Prevenir comportamento padrão de links de vídeo para abrir em nova aba com foco
+        document.querySelectorAll('.video-link-container a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                // Garantir que abra em nova aba sem perder o foco na página atual
+                window.open(this.href, '_blank', 'noopener,noreferrer');
+                e.preventDefault();
+            });
+        });
+    </script>
+</body>
+</html>
